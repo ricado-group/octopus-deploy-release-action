@@ -24,8 +24,8 @@ A Simple Action that uses the Octopus Deploy [`octo`](https://hub.docker.com/r/o
 ```yml
 uses: ricado-group/octopus-deploy-release-action@v1.0.0
 with:
-	server: 'https://instancename.octopus.app'
-	apiKey: ${{ secrets.OCTOPUS_APIKEY }}
-	project: 'MyProjectName'
-	version: '2.1.0'
+  server: 'https://instancename.octopus.app'
+  apiKey: ${{ secrets.OCTOPUS_APIKEY }}
+  project: 'MyProjectName'
+  version: '2.1.0'
 ```
