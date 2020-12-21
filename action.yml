@@ -17,7 +17,13 @@ inputs:
 runs:
   using: 'docker'
   image: 'docker://octopusdeploy/octo:7.4.4-alpine'
-  args: create-release --version ${{ inputs.version }} --defaultPackageVersion ${{ inputs.version }} --project "${{ inputs.project }}" --server ${{ inputs.server }} --apiKey ${{ inputs.apiKey }}
+  args: 
+    - create-release
+    - --version=${{ inputs.version }}
+    - --defaultPackageVersion=${{ inputs.version }}
+    - --project=${{ inputs.project }}
+    - --server=${{ inputs.server }}
+    - --apiKey=${{ inputs.apiKey }}
 branding:
   icon: 'package'
   color: 'blue'
