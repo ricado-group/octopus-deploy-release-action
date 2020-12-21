@@ -1,0 +1,29 @@
+name: 'Octopus Deploy Release Action'
+description: 'A Simple Action that uses the Octopus Deploy `octo` Docker Image to Create a new Release for a given Project'
+author: 'RICADO Group'
+inputs:
+  server:
+    description: 'The URI of your Octopus Deploy Instance'
+    required: true
+  apikey:
+    description: 'The API Key used to Authenticate with Octopus Deploy'
+    required: true
+  project:
+    description: 'The Name of the Project for this new Release'
+    required: true
+  version:
+    description: 'The Version for this Release'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://octopusdeploy/octo:7.4.1-alpine'
+  args:
+    - create-release
+    - --version "${{ inputs.version }}"
+    - --defaultPackageVersion "${{ inputs.version }}"
+    - --project "${{ inputs.project }}"
+    - --server "${{ inputs.server }}"
+    - --apiKey "${{ inputs.apiKey }}"
+branding:
+  icon: 'package'
+  color: 'blue'
