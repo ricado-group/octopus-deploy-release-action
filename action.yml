@@ -14,8 +14,8 @@ inputs:
   version:
     description: 'The Version for this Release'
     required: true
-  releaseNotes:
-    description: 'Release Notes for this Release'
+  releaseNotesFile:
+    description: 'A File containing Release Notes for this Release'
     required: false
     default: ''
 runs:
@@ -28,7 +28,7 @@ runs:
     - --project=${{ inputs.project }}
     - --server=${{ inputs.server }}
     - --apiKey=${{ inputs.apiKey }}
-    - --releaseNotes="${{ inputs.releaseNotes }}"
+    - --releaseNotesFile=${{ inputs.releaseNotesFile }}
 branding:
   icon: 'package'
   color: 'blue'
