@@ -28,7 +28,7 @@ runs:
     - --project=${{ inputs.project }}
     - --server=${{ inputs.server }}
     - --apiKey=${{ inputs.apiKey }}
-    - --releaseNotes=${{ inputs.releaseNotes }}
+    - --releaseNotes="${{ inputs.releaseNotes }}"
 branding:
   icon: 'package'
   color: 'blue'
