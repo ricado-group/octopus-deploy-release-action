@@ -14,6 +14,10 @@ inputs:
   version:
     description: 'The Version for this Release'
     required: true
+  releaseNotes:
+    description: 'Release Notes for this Release'
+    required: false
+    default: ''
 runs:
   using: 'docker'
   image: 'docker://octopusdeploy/octo:7.4.4-alpine'
@@ -24,6 +28,7 @@ runs:
     - --project=${{ inputs.project }}
     - --server=${{ inputs.server }}
     - --apiKey=${{ inputs.apiKey }}
+    - --releaseNotes=${{ inputs.releaseNotes }}
 branding:
   icon: 'package'
   color: 'blue'
