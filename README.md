@@ -22,7 +22,7 @@ A Simple Action that uses the Octopus Deploy [`octo`](https://hub.docker.com/r/o
 ## Example Usage
 
 ```yml
-uses: ricado-group/octopus-deploy-release-action@v1.0.0
+uses: ricado-group/octopus-deploy-release-action@v1.2
 with:
   server: 'https://instancename.octopus.app'
   apiKey: ${{ secrets.OCTOPUS_APIKEY }}
