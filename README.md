@@ -1,3 +1,7 @@
+# Deprecated
+
+With the Release of GitHub Actions from Octopus Deploy, you can now make use of the official action: https://github.com/OctopusDeploy/create-release-action
+
 # Octopus Deploy Release Action
 A Simple Action that uses the Octopus Deploy [`octo`](https://hub.docker.com/r/octopusdeploy/octo) Docker Image to Create a new Release for a given Project
 
